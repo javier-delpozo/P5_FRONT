@@ -34,9 +34,13 @@ export default function PostPage({ data }: PageProps) {
       <p>{likeMessage.value}</p>
       <h3>Comentarios</h3>
       <ul>
-        {post.comments.map((c: any) => (
-          <li>{c.text} - <i>{c.author}</i></li>
-        ))}
+      {post.comments && post.comments.length > 0 ? (
+       post.comments.map((c: any) => (
+       <li>{c.text} - <i>{c.author}</i></li>
+       ))
+       ) : (
+       <li>No hay comentarios aún.</li>
+       )}
       </ul>
     </div>
   );

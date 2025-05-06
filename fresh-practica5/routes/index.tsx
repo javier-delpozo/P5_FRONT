@@ -32,6 +32,14 @@ export default function Home({ data }: PageProps<{ posts: any[] }>) {
             <p>Likes: {post.likes}</p>
           </div>
         ))}
+        <a href="/search">
+        <button style={{ marginBottom: "20px" }}>Ir a Buscar</button>
+        </a>
+
+        <a href="/post/create">
+        <button style={{ marginBottom: "20px" }}>Ir a crear</button>
+        </a>
+  
       </div>
     </div>
   );
